@@ -13,7 +13,9 @@
     --clr-slate-500: hsl(216, 15%, 48%);
     --clr-slate-900: hsl(218, 44%, 22%);
 
-    --default-fs: 17px;
+    --default-fs: 17;
+    --fs-lg: 25;
+    --fs-sm: 17;
     --fw-400: 400;
     --fw-700: 700;
 }
@@ -24,36 +26,28 @@ body {
     font-family: var(--font-family);
     color: var(--text-color);
     background-color: var(--background-color);
-    line-height: 1.5;
 }
 
 
-
-
 html {
-    font-size: var(--default-fs);
+    font-size: calc(var(--default-fs) * 1px);
     /* Base font size for rem calculation */
 }
 
 .title {
+    font-size: calc(var(--fs-lg) / var(--default-fs) * 1rem);
     font-weight: var(--fw-700);
     color: var(--clr-slate-900);
     text-align: center;
 }
 
 .desc {
+    font-size: calc(var(--fs-sm) / var(--default-fs) * 1rem);
     font-weight: var(--fw-400);
     color: var(--clr-slate-500);
-    font-size: 13px;
     text-align: center;
-
 }
 
-.px-to-rem {
-    --px-value: 16;
-    /* Example px value */
-    font-size: calc(var(--px-value) / 16 * 1rem);
-}
 
 .image {
     width: 100%;
@@ -64,16 +58,16 @@ html {
 
 .image-wrapper {
     border-radius: 12px;
-    height: 240px;
+    height: 300px;
     overflow: hidden;
 }
 
 .card {
     display: grid;
     row-gap: 10px;
-    width: min(240px, 100%);
+    width: min(300px, 100%);
     background-color: white;
-    padding: 15px 12px 25px 12px;
+    padding: calc(12 / var(--default-fs) * 1rem) calc(15 / var(--default-fs) * 1rem) calc(25 / var(--default-fs) * 1rem) calc(12 / var(--default-fs) * 1rem);
     overflow: hidden;
     border-radius: 10px;
     justify-items: center;
@@ -86,30 +80,10 @@ body {
     background-color: var(--clr-slate-300);
 }
 
-@media (min-width: 1440px) {
-    html {
-        font-size: 17px;
-        /* Slightly larger font size for larger screens */
-    }
-}
 
-@media (max-width: 1200px) {
+@media (max-width: 375px) {
     html {
-        font-size: 15px;
-        /* Slightly smaller font size for medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    html {
-        font-size: 14px;
-        /* Smaller font size for tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    html {
-        font-size: 13px;
+        font-size: 14px !important;
         /* Smallest font size for mobile devices */
     }
 }
