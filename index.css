@@ -14,7 +14,7 @@
     --clr-slate-900: hsl(218, 44%, 22%);
 
     --default-fs: 17;
-    --fs-lg: 25;
+    --fs-lg: 22;
     --fs-sm: 17;
     --fw-400: 400;
     --fw-700: 700;
@@ -67,7 +67,7 @@ html {
     row-gap: 10px;
     width: min(300px, 100%);
     background-color: white;
-    padding: calc(12 / var(--default-fs) * 1rem) calc(15 / var(--default-fs) * 1rem) calc(25 / var(--default-fs) * 1rem) calc(12 / var(--default-fs) * 1rem);
+    padding: calc(15 / var(--default-fs) * 1rem) calc(15 / var(--default-fs) * 1rem) calc(25 / var(--default-fs) * 1rem) calc(15 / var(--default-fs) * 1rem);
     overflow: hidden;
     border-radius: 10px;
     justify-items: center;
